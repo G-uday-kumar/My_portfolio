@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} 
+certificate
+{% endblock%}
+
+{% block content %}
+<center>
+    <div >
+        <h1 style="color: blueviolet;font-size: 60px;">My Projects</h1>
+        <h3>These are the Project i worked during my accademics</h3>
+    </div>
+    <hr>
+        <div style="display: flex; flex-wrap: wrap; gap:20px;margin-bottom: 200px; margin-top: 30px;" >
+            {% for i in certify %}
+            <div style="border: 2px solid blueviolet; padding: 20px; width:30%;height:330px; border-radius: 10px; margin-left: 20px;">
+                <h1>{{i.certi}}</h1><hr>
+                <h5 style="text-align: justify;">{{i.dis}}</h5>
+            </div>
+            {% empty %}
+
+    <h2 style="color:red; text-align:center;">
+        No Projects Available
+    </h2>
+            {% endfor %}
+            
+            
+        </div>
+
+    
+</center>
+{% endblock%}

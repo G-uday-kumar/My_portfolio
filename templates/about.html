@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+about
+{% endblock%}
+
+{% block content %}
+<h1 style="color: blueviolet;font-size: 50px; text-align: center;">About Me</h1>
+<br><hr>
+<div style=" display: flex;">
+    <div>
+        <img style="width: 400px; height: 400px;margin-top: 60px;margin-left: 60px;" src="{% static 'imgs\profile-pic.png' %}" alt="loading...">
+    </div>
+
+        <div style="margin: 60px;padding: 20px;width: 60%;justify-content:center;">
+        <h3>Hello i am </h3>
+        <h1><span style="color: rebeccapurple;">
+            G Uday Kumar</h1>
+        </span>
+        <h4> Full Stack Developer</h4>
+        <p style=" text-align: justify;">I am Uday Kumar, a final-year Computer Science Engineering graduate with a strong interest in software development and emerging technologies. I am currently learning Python Full Stack development and continuously improving my programming and problem-solving skills. I enjoy building practical projects, learning new technologies, and working in team environments. I am a quick learner, adaptable, and committed to continuous growth. My goal is to begin my career as a software developer, contribute to meaningful projects, and grow into a skilled technology professional.
+</p>
+        <button style="padding: 5px;background-color: black;color: aliceblue;font-size: 20px;" ><a style="color: aliceblue;text-decoration: none;" href="{% url 'about' %}">View My Profile</a>
+            
+        </button>
+        
+        <button style="padding: 5px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);font-size: 20px;" ><a style="color: black;text-decoration: none;" href="{% url 'contact' %}">
+            Contact
+        </a>
+        </button>
+    </div>
+    
+</div>
+{% endblock%}

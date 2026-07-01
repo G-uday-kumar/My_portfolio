@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} 
+projects
+{% endblock%}
+
+{% block content %}
+<center>
+    <div >
+        <h1 style="color: blueviolet;font-size: 60px;">My Projects</h1>
+        <h3>These are the Project i worked during my accademics</h3>
+    </div>
+    <hr>
+        <div style="display: flex;" >
+            {% for i in proj %}
+            <div style="border: 2px solid blueviolet; padding: 20px; width: 30%;border-radius: 10px; margin: 20px;">
+                <h1>{{i.Project_name}}</h1><hr>
+                <h5 style="text-align: justify;">{{i.discription}}</h5>
+            </div>
+            {% empty %}
+
+    <h2 style="color:red; text-align:center;">
+        No Projects Available
+    </h2>
+            {% endfor %}
+            
+            
+        </div>
+
+    
+</center>
+{% endblock%}
